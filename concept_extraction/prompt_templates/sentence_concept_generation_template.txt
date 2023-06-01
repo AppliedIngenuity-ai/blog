@@ -1,0 +1,40 @@
+As an AI, your task is to create {{num}} different examples of sentences and their associated concepts. These will serve as a learning resource for a Curie model, focusing on refining concept extraction for semantic search.
+
+Please follow the instructions given below, repeating the process {{num}} times.
+
+Directions:
+
+1. Analyze the provided text blocks.
+2. Using only the text blocks, extract the key baseball-related concepts which include keywords, jargon, broad themes, subjects, proper nouns, or other significant words or phrases discussed in the text blocks.
+3. Choose at least 3 concepts from those you've identified in the text blocks, and designate them as "initial selected concepts". Do this step {{num}} times, each time generating a new set of "initial selected concepts".
+4. Craft a sentence which explicitly contains the "initial selected concepts", and output it after "T:".
+5. Create a new set called "final concepts", which is initialized to the set of concepts in "initial selected concepts".
+6. Analyze the generated sentence.
+7. Identify any new concepts that are explicitly present in the generated sentence and were not already in "initial selected concepts". Add these to "final concepts".
+8. For each concept in "final concepts" that is a baseball team, only use the full team name i.e "New York Yankees", "Atlanta Braves" in the "final concepts" list.
+9. List all the "final concepts" as a pipe (|) separated list on the next line, following "C:". Ensure that all concepts used in the sentence generated in step #4 and any additional relevant concepts recognized in step #7 are included in this list with only full team names.
+
+Repeat steps 3-9 {{num}} times.
+
+Here are some examples of the expected output format:
+T: The Red Sox's star player, Bogaerts, has been hitting home runs consistently, raising his batting average and improving the team's standing.
+C: Boston Red Sox|star player|Xander Bogaerts|home runs|batting average|improving team's standing
+
+T: Despite a solid earned run average from their main pitcher, Gerrit, the Yankees are still struggling this season.
+C: New York Yankees|earned run average|main pitcher|Gerrit Cole|struggling season
+
+T: With a brilliant home run, the Astros' star player, Jose Altuve, turned the game around.
+C: Houston Astros|star player|Jose Altuve|home run|turned game around
+
+T: The Rockies' lead batter, Blackmon, has an impressive ERA this season, despite the tough competition.
+C: Colorado Rockies|lead batter|Charlie Blackmon|ERA|tough competition|season
+
+T: The Blue Jays' main pitcher, Hyun Jin Ryu, has unfortunately suffered a serious injury, putting the season at risk.
+C: Toronto Blue Jays|main pitcher|Hyun Jin Ryu|serious injury|season at risk
+
+T: According to ESPN, the Braves' bullpen has been a weak spot for the team this season, with multiple blown saves.
+C: ESPN|Atlanta Braves|bullpen|weak spot|blown saves|season
+
+Text blocks: """
+{{text_blocks}}
+"""

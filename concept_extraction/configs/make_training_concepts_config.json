@@ -1,0 +1,6 @@
+{
+    "prompt_template_file" : "./prompt_templates/sentence_concept_generation_template.txt",
+    "source_documents_file_" : "./data/example_documents.json",
+    "error_rate" : 0.01,
+    "source_documents_file" : "./data/extracted_baseball.json"
+}
