@@ -1,7 +1,7 @@
 # Readme for concept_extraction
 
 The code and data in this directory correspond to the blog post:
-https://appliedingenuity.substack.com/  Build a Domain-Specific, Spell Correcting, Concept Extractor in Less Than One Day 
+[https://appliedingenuity.substack.com/  Build a Domain-Specific, Spell Correcting, Concept Extractor in Less Than One Day ](https://appliedingenuity.substack.com/p/build-a-domain-specific-spell-correcting)
 
 The data file ./extracted_baseball.json was built using rec.sport.baseball from: http://qwone.com/~jason/20Newsgroups/ 20news-18828.tar.gz
 
